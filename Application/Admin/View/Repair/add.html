@@ -1,0 +1,65 @@
+<extend name="Public/base" />
+
+<block name="body">
+        <div class="main-title">
+            <h2>
+                新增报修
+            </h2>
+        </div>
+        <form action="{:U('Repair/add')}" method="post" class="form-horizontal">
+            <input type="hidden" name="pid" value="">
+            <div class="form-item">
+                <label class="item-label">姓名</label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="name" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">电话</label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="tel" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">地址</label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="address" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">标题(简述报修问题)</label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="title" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">内容<span class="check-tips">（详细叙述报修内容）</span></label>
+                <div class="controls textarea input-large">
+                    <textarea name="content"></textarea>
+                    <input type="hidden" name="sn" value="bx{:time()|time_format}">
+                    <input type="hidden" name="time" value="{:time()|time_format}">
+                    <input type="hidden" name="status" value="0">
+                </div>
+            </div>
+            <div class="form-item">
+                <input type="hidden" name="id" value="">
+                <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="cont-ft">
+        <div class="copyright">
+            <div class="fl">感谢使用<a href="http://www.onethink.cn" target="_blank">OneThink</a>管理平台</div>
+            <div class="fr">V1.1.141101</div>
+        </div>
+    </div>
+</block>
+<!-- /内容区 -->
+<block name="script">
+    <script type="text/javascript" charset="utf-8">
+        //导航高亮
+        highlight_subnav('{:U('index')}');
+    </script>
+</block>
