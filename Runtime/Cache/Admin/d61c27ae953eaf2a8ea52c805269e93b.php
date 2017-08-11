@@ -120,9 +120,9 @@
                 <label class="item-label">内容<span class="check-tips">（详细叙述报修内容）</span></label>
                 <div class="controls textarea input-large">
                     <textarea name="content"></textarea>
-                    <input type="hidden" name="sn" value="bx<?php echo time()|time_format;?>">
-                    <input type="hidden" name="time" value="<?php echo time()|time_format;?>">
-                    <input type="hidden" name="status" value="0">
+                    <!--<input type="hidden" name="sn" value="bx<?php echo time()|time_format;?>">-->
+                    <!--<input type="hidden" name="time" value="<?php echo time()|time_format;?>">-->
+                    <!--<input type="hidden" name="status" value="0">-->
                 </div>
             </div>
             <div class="form-item">
